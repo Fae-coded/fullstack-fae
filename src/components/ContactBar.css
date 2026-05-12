@@ -1,0 +1,16 @@
+.contact-bar {
+    background-color: #4E3C9F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+}
+
+.contact-link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+}
