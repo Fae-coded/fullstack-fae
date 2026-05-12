@@ -1,28 +1,25 @@
 //import { useState } from 'react'
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-dom/client';
-import Home from './pages/Home.jsx';
-import Projects from './pages/Projects.js';
-import Experience from './pages/Experience.js';
-import Interests from './pages/Interests.js';
+import { Routes, Route } from 'react-router';
+import { Home } from './pages/Home.jsx';
+import { Projects } from './pages/Projects.jsx';
+import { Experience } from './pages/Experience.jsx';
+import { Interests } from './pages/Interests.jsx';
+import Banners from './pages/Banners.jsx';
 
 function App() {
-  
-
   return (
-    <>
-      <BrowserRouter>
         <Routes>
-          {/* nested route to include navbar and contact info on each page */}
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/interests" element={<Interests />} />
+          <Route path="/" element={<Banners />}>
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/interests" element={<Interests />} />
           {/* to catch unmatched routes and display a 404 page 
           <Route path="*" element={<NotFound />} /> */}
+          </Route>
         </Routes>
-      </BrowserRouter>
-    </>
   );
 }
 
