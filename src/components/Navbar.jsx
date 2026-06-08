@@ -25,7 +25,7 @@ export default function Navbar() {
 
           <div className= "navbar-link-list">
             {/* Separate styling according to media queries - desktop and mobile layouts */}
-            {menuOpen && (<Link className = "navbar-link" to="/home" onClick={closeMenu}>Home</Link>)}
+            {menuOpen && (<Link className = "navbar-link" to="/" onClick={closeMenu}>Home</Link>)}
             {menuOpen && (<Link className = "navbar-link" to="/projects" onClick={closeMenu}>Projects</Link>)}
             {menuOpen && (<Link className = "navbar-link" to="/experience" onClick={closeMenu}>Experience</Link>)}
             {menuOpen && (<Link className = "navbar-link" to="/interests" onClick={closeMenu}>Interests</Link>)}
